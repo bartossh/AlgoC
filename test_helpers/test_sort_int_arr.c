@@ -138,7 +138,7 @@ int range_rand(int min_num, int max_num) {
  *  returns: bool, true if test passed with success or false otherwise
  */
 bool test_dynamic_alloc(void (*sort)(int*, int) ) {
-    int len = range_rand(LEN_LONG, LEN_EXTRIME); 
+    int len = range_rand(LEN_LONG, LEN_EXTRIME);
     printf("Testing dynamically allocated array of length %i \n", len);
     int* testArr = malloc(len * sizeof(int));
      
