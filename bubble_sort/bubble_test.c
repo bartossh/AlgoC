@@ -5,6 +5,13 @@
 
 extern void sort(int* arr, int len);
 
+/*
+ * Function:  main
+ * --------------------
+ * runs tests for bubble sort package
+ *
+ *  returns: int
+ */
 int main() {
    bool ts0 = test_simple(&sort);
    munit_assert_true(ts0);
