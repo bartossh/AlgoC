@@ -2,7 +2,7 @@
 #include <stdbool.h>
 
 /*
- * Function:  sort
+ * Function:  sort_bubble
  * --------------------
  * sorts array of integers by brute force, implements bubble sort algorithm
  *  arr: pointer to array to be sorted
@@ -10,7 +10,7 @@
  *
  *  returns: void
  */
-void sort(int* arr, int len) {
+void sort_bubble(int* arr, int len) {
     bool sorted = false;
     int n = len -1;
     while (!sorted) {
