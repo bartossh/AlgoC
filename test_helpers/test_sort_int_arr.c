@@ -2,6 +2,8 @@
 #include <sys/resource.h>
 #include <stdio.h>
 #include <stdbool.h>
+#include <time.h>
+#include <stdlib.h>
 #include "test.h"
 
 bool test_simple(void (*sort)(int*, int) ) {
@@ -26,6 +28,7 @@ bool test_simple(void (*sort)(int*, int) ) {
     printf("\n");
     printf("Test passed: %s \n", result?"true":"false");
     printf("---\n\n");
+    
     return result;
 }
 
@@ -53,6 +56,7 @@ bool test_mixed(void (*sort)(int*, int))  {
     printf("\n");
     printf("Test passed: %s \n", result?"true":"false");
     printf("---\n\n");
+    
     return result;
 }
 
@@ -79,8 +83,43 @@ bool test_long(void (*sort)(int*, int))  {
     printf("\n");
     printf("Test passed: %s \n", result?"true":"false");
     printf("---\n\n");
+    
     return result;
 }
+
+int range_rand(int min_num, int max_num) {
+    if (min_num >= max_num) {
+        fprintf(stderr, "min_num is greater or equal than max_num!\n");
+    }
+    srand(time(NULL));
+    return min_num + (rand() % (max_num - min_num));
+}
+
+bool test_dynamic_alloc(void (*sort)(int*, int) ) {
+    int len = range_rand(LEN_LONG, LEN_EXTRIME); 
+    printf("Testing dynamically allocated array of length %i \n", len);
+    int* testArr = malloc(len * sizeof(int));
+     
+    for (int i = len-1; i >= 0; i--) {
+        testArr[i] = i;
+    }
+    
+    sort(testArr, len);
+    
+    bool result = true;
+    for (int i = 0; i < len; i++) {
+        if (i < len-1 && testArr[i] > testArr[i+1] ) result = false;
+    }
+
+    free(testArr);
+    
+    printf("\n");
+    printf("Test passed: %s \n", result?"true":"false");
+    printf("---\n\n");
+   
+    return result;
+}
+
 
 double get_time() {
     struct timeval t;
@@ -101,7 +140,23 @@ void bench_1_000_000(void (*sort)(int*, int) ) {
     sort(testArr, LEN_EXTRIME);
     double t1 = get_time();
     
-    printf("Test took: %f \n", t1-t0);
+    printf("Test took: %f sec\n", t1-t0);
     printf("---\n\n");
 }
 
+
+void bench_1_000_000_dynamic(void (*sort)(int*, int) ) {
+    printf("Benchmark %i dynamically allocated\n", LEN_EXTRIME);
+    int* testArr = malloc(LEN_EXTRIME*sizeof(int));
+    
+    for (int i = LEN_EXTRIME-1; i >= 0; i--) {
+        testArr[i] = i;
+    }
+    
+    double t0 = get_time(); 
+    sort(testArr, LEN_EXTRIME);
+    double t1 = get_time();
+    free(testArr);
+    printf("Test took: %f sec\n", t1-t0);
+    printf("---\n\n");
+}

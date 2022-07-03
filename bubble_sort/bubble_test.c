@@ -14,8 +14,12 @@ int main() {
    
    bool ts2 = test_long(&sort);
    munit_assert_true(ts2);
+
+   bool t3 = test_dynamic_alloc(&sort);
+   munit_assert_true(t3);
    
    bench_1_000_000(&sort);
+   bench_1_000_000_dynamic(&sort);
    
    return 0;
 }
