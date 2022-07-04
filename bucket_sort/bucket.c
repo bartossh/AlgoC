@@ -52,7 +52,7 @@ void sort_bucket(int* arr, int len) {
     capacityX = len+1;
     capacityY = len/max+1;
 
-    Buckets** buckets = calloc(len, sizeof(Buckets*)); //FIXME:(bartossh): the heap allocation is inefficient for performance
+    Buckets** buckets = calloc(len, sizeof(Buckets*)); //FIXME:(bartossh): the heap allocation is inefficient for performances
 
     for (int i = 0; i < capacityX; i++) { // initialize Buckets for each value
         buckets[i] = new_bucket(capacityY);
