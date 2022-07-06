@@ -156,7 +156,7 @@ bool test_dynamic_alloc(void (*sort)(int*, int) ) {
     free(testArr);
     
     printf("\n");
-    printf("Test passed: %s \n", result?"true":"false");
+    printf("Test passed: %s \n", result ? "true":"false");
     printf("---\n\n");
    
     return result;
