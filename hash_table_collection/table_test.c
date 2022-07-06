@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdbool.h>
-#include "./solver.h"
+#include <limits.h>
+#include "./table.h"
 #include "../munit/munit.h"
+#include "../test_helpers/test.h"
 
 bool test_table_no_conflicts() {
     int cases[10] = {500000, 12, 10000, 1267, 1, 99990, 288888, 22222, 456789, 155342};
@@ -69,9 +71,9 @@ bool test_table_big() {
     for (int i = 0; i < iterations; i++) {
        int* value = get_from_table(mix(i), table);
 
-    if (i % (iterations/100) == 0) {
-        printf("%i == %i %s\n",*value, mix(i), *value == mix(i) ? "true" : "false");
-    }
+        if (i % (iterations/100) == 0) {
+            printf("%i == %i %s\n",*value, mix(i), *value == mix(i) ? "true" : "false");
+        }
 
        if (value == NULL) {
            return false;
@@ -79,6 +81,31 @@ bool test_table_big() {
 
 
        if (*value != mix(i)) {
+            return false;
+       }
+    }
+
+    free_table(table);
+    return true;
+}
+
+bool test_table_mega_big() {
+    const int iterations = INT_MAX/1000;
+    struct dataitem** table = make_table();
+
+    for (int i = 0; i < iterations; i+=1) {
+       insert_to_table(i, i, table);
+    }
+
+    for (int i = 0; i < iterations; i+=1) {
+       int* value = get_from_table(i, table);
+
+       if (value == NULL) {
+           return false;
+       }
+
+
+       if (*value != i) {
             return false;
        }
     }
@@ -96,7 +123,13 @@ int main() {
 
     bool ts2 = test_table_big();
     munit_assert_true(ts2);
-    
+
+    double t0 = get_time();
+    bool ts3 = test_table_mega_big();
+    double t1 = get_time();
+    munit_assert_true(ts3);
+    printf("Test of: %i inputs and reads from table took: %f seconds\n", INT_MAX/1000, t1-t0);
+
     return 0;
 }
 
