@@ -1,0 +1,6 @@
+make --dry-run --keep-going --print-directory
+make: Entering directory `/Users/bartoszlenart/Projects/AlgoC'
+make: Leaving directory `/Users/bartoszlenart/Projects/AlgoC'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
