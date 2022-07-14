@@ -17,3 +17,7 @@ Playground repository containing collection of algorithms written in C.
 
 1. [Hash table](https://github.com/bartossh/AlgoC/blob/main/hash_table_collection/table.c)
 2. [Tries Tree](https://github.com/bartossh/AlgoC/blob/main/tries_collection/tries.c)
+
+### Math
+
+1. [Extended Euclidean](https://github.com/bartossh/AlgoC/blob/main/extended_euclidean_math/extendedeuclidean.c)

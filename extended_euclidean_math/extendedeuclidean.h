@@ -1,0 +1,1 @@
+int *solve_extedned_euclidean(int x, int y);
