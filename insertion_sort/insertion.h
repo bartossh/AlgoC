@@ -1,1 +1,1 @@
-void sort_insertion(int*, int);
+void sort_insertion(int *, int);
