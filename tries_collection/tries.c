@@ -87,7 +87,7 @@ void printrec(Node *node, unsigned char *prefix, int length) {
  *
  * returns: void
  */
-void printtrie(Node *root) {
+void trieprint(Node *root) {
   if (root == NULL) {
     printf("TRIE <EMPTY>\n");
     return;
