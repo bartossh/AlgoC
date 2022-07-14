@@ -1,5 +1,5 @@
-#include <stdio.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 /*
  * Function:  sort_bubble
@@ -10,20 +10,19 @@
  *
  *  returns: void
  */
-void sort_bubble(int* arr, int len) {
-    bool sorted = false;
-    int n = len -1;
-    while (!sorted) {
-       sorted = true;
-       for (int i =0; i < n; i++) {
-           if (arr[i] > arr[i+1]) {
-               int tmp = arr[i];
-               arr[i] = arr[i+1];
-               arr[i+1] = tmp;
-               sorted = false;
-           }
-       }
-       n--;
+void sort_bubble(int *arr, int len) {
+  bool sorted = false;
+  int n = len - 1;
+  while (!sorted) {
+    sorted = true;
+    for (int i = 0; i < n; i++) {
+      if (arr[i] > arr[i + 1]) {
+        int tmp = arr[i];
+        arr[i] = arr[i + 1];
+        arr[i + 1] = tmp;
+        sorted = false;
+      }
     }
+    n--;
+  }
 }
-
