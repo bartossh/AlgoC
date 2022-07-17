@@ -1,0 +1,1 @@
+int solve_coin_change(int *coins, int length, int amount);

@@ -27,3 +27,4 @@ Playground repository containing collection of algorithms written in C.
 #### Memoization
 
 1. [Fibonacci nth element](https://github.com/bartossh/AlgoC/blob/main/fibonacci_dyn_prog/fibonacci.c) - calculates n'th fibonacci sequence element recursively storing each n'th fibonacci value in the map to only calculate it once
+2. [Coin Change](https://github.com/bartossh/AlgoC/blob/main/coinchange_dyn_prog/coinchange.c) - calculates the fewest number of coins that need to make up that amount
