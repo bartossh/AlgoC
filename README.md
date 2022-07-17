@@ -21,3 +21,9 @@ Playground repository containing collection of algorithms written in C.
 ### Math
 
 1. [Extended Euclidean](https://github.com/bartossh/AlgoC/blob/main/extended_euclidean_math/extendedeuclidean.c)
+
+### Dynamic Programming
+
+#### Memoization
+
+1. [Fibonacci nth element](https://github.com/bartossh/AlgoC/blob/main/fibonacci_dyn_prog/fibonacci.c) - calculates n'th fibonacci sequence element recursively storing each n'th fibonacci value in the map to only calculate it once
