@@ -34,6 +34,7 @@ int solve_max_sub_array(int *arr, int len) {
     }
     res = max(res, mem[i]);
   }
+  free(mem);
 
   return res;
 }
