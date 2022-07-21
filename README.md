@@ -13,7 +13,7 @@ Playground repository containing collection of algorithms written in C.
 3. [Insertion Sort](https://github.com/bartossh/AlgoC/blob/main/insertion_sort/insertion.c)
 4. [Quick Sort](https://github.com/bartossh/AlgoC/blob/main/quick_sort/quick.c)
 
-### Collectoion
+### Collection
 
 1. [Hash table](https://github.com/bartossh/AlgoC/blob/main/hash_table_collection/table.c)
 2. [Tries Tree](https://github.com/bartossh/AlgoC/blob/main/tries_collection/tries.c)
