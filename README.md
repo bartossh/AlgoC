@@ -17,6 +17,7 @@ Playground repository containing collection of algorithms written in C.
 
 1. [Hash table](https://github.com/bartossh/AlgoC/blob/main/hash_table_collection/table.c)
 2. [Tries Tree](https://github.com/bartossh/AlgoC/blob/main/tries_collection/tries.c)
+3. [Linked List](https://github.com/bartossh/AlgoC/blob/main/linkedlist_collection/linkedlist.c)
 
 ### Math
 
