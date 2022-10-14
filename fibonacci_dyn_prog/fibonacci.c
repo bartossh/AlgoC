@@ -9,7 +9,12 @@ int recursive_fib(struct dataitem **store, int n) {
   if (v != NULL) {
     return *v;
   }
-  int nv = recursive_fib(store, n - 1) + recursive_fib(store, n - 2);
+  int nv = 1;
+  int before = 1;
+  for (int i = 2; i < n; i++) {
+    nv = nv + before;
+    before = nv - before;
+  }
   insert_to_table(n, nv, store);
   return nv;
 }
