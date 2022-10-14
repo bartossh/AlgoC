@@ -22,7 +22,7 @@ Playground repository containing collection of algorithms written in C.
 ### Math
 
 1. [Extended Euclidean](https://github.com/bartossh/AlgoC/blob/main/extended_euclidean_math/extendedeuclidean.c)
-2. [Joshephus Problem](https://github.com/bartossh/AlgoC/blob/main/joshephus/jushephus.c.c)
+2. [Joshephus Problem](https://github.com/bartossh/AlgoC/blob/main/joshephus/jushephus.c)
 
 ### Dynamic Programming
 
