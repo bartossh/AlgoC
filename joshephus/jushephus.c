@@ -27,7 +27,7 @@ unsigned int max_set_bit_position(unsigned num) {
  * The first soldier killed the man to his left, the next surviving soldier killed the man to his left, and so on.
  * Josephus was among the last two men standing, "whether we must say it happened so by chance,
  * or whether by the providence of God," and he convinced the other survivor to surrender rather than die.
- *  returns: void
+ *  returns: unsigned int
  */
 unsigned joshephus_solver(unsigned num) {
     unsigned mask = 1 << (max_set_bit_position(num) - 1);
