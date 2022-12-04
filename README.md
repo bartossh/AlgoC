@@ -4,6 +4,10 @@ Playground repository containing collection of algorithms written in C.
 
 "Unlike most computer languages, C allows the programmer to write directly to memory. Key constructs in C such as structs, pointers and arrays are designed to structure, and manipulate memory in an efficient, machine-independent fashion."
 
+## Dependencies
+
+Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/munit.git`.
+
 ## Algorithms
 
 ### Sort
