@@ -16,6 +16,7 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 2. [Bucket Sort](https://github.com/bartossh/AlgoC/blob/main/bucket_sort/bucket.c)
 3. [Insertion Sort](https://github.com/bartossh/AlgoC/blob/main/insertion_sort/insertion.c)
 4. [Quick Sort](https://github.com/bartossh/AlgoC/blob/main/quick_sort/quick.c)
+4. [Bartosz Sort](https://github.com/bartossh/AlgoC/blob/main/bartosz_sort/bartosz.c) - playground with clang, prototyping sorting function
 
 ### Collection
 
