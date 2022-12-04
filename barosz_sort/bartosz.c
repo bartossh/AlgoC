@@ -13,8 +13,29 @@
  *
  *  returns: void
  */
-void sort_bartosz(int *arr, int len) {
-  
+ReallocatedArr sort_bartosz(int *arr, int len) {
+  int *temp = calloc(len, sizeof(int));
+  int len_t = len;
+  for (int i = 0; i < len; i++) {
+    int v = arr[i];
+    if (v > len_t) {
+        temp = realloc(temp, sizeof(*temp)+(v-len)*sizeof(int));
+        len_t = v;
+    }
+    if (v == 0) {
+        continue;
+    }
+
+    temp[v-1] = v;
+  }
+  ReallocatedArr res;
+  if (len == len_t) {
+    arr = temp;
+    res.arr = arr;
+    res.len = len;
+    return res;
+  }
+  return remove_empty_allocs(temp, len_t);
 }
 
 ReallocatedArr remove_empty_allocs(int *arr, int len) {

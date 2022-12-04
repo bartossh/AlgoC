@@ -10,4 +10,4 @@ bool test_dynamic_alloc(void (*sort)(int *, int));
 
 #define LEN_SHORT 11
 #define LEN_LONG 31
-#define LEN_EXTRIME 10000000
+#define LEN_EXTREME 10000000

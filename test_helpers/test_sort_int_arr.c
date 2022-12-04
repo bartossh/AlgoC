@@ -141,7 +141,7 @@ int range_rand(int min_num, int max_num) {
  *  returns: bool, true if test passed with success or false otherwise
  */
 bool test_dynamic_alloc(void (*sort)(int *, int)) {
-  int len = range_rand(LEN_LONG, LEN_EXTRIME);
+  int len = range_rand(LEN_LONG, LEN_EXTREME);
   printf("Testing dynamically allocated array of length %i \n", len);
   int *testArr = malloc(len * sizeof(int));
 
@@ -189,15 +189,15 @@ double get_time() {
  *  returns: void,
  */
 void bench_1_000_000(void (*sort)(int *, int)) {
-  printf("Benchmark %i \n", LEN_EXTRIME);
-  int testArr[LEN_EXTRIME];
+  printf("Benchmark %i \n", LEN_EXTREME);
+  int testArr[LEN_EXTREME];
 
-  for (int i = LEN_EXTRIME - 1; i >= 0; i--) {
+  for (int i = LEN_EXTREME - 1; i >= 0; i--) {
     testArr[i] = i;
   }
 
   double t0 = get_time();
-  sort(testArr, LEN_EXTRIME);
+  sort(testArr, LEN_EXTREME);
   double t1 = get_time();
 
   printf("Test took: %f sec\n", t1 - t0);
@@ -213,15 +213,15 @@ void bench_1_000_000(void (*sort)(int *, int)) {
  *  returns: void,
  */
 void bench_1_000_000_dynamic(void (*sort)(int *, int)) {
-  printf("Benchmark %i dynamically allocated\n", LEN_EXTRIME);
-  int *testArr = malloc(LEN_EXTRIME * sizeof(int));
+  printf("Benchmark %i dynamically allocated\n", LEN_EXTREME);
+  int *testArr = malloc(LEN_EXTREME * sizeof(int));
 
-  for (int i = LEN_EXTRIME - 1; i >= 0; i--) {
+  for (int i = LEN_EXTREME - 1; i >= 0; i--) {
     testArr[i] = i;
   }
 
   double t0 = get_time();
-  sort(testArr, LEN_EXTRIME);
+  sort(testArr, LEN_EXTREME);
   double t1 = get_time();
   free(testArr);
   printf("Test took: %f sec\n", t1 - t0);
