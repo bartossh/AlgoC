@@ -4,6 +4,55 @@
 #include <stdio.h>
 #include "./bartosz.h"
 
+bool test_remove_empty_allocs() {
+
+  typedef struct testCase {
+  int given[14];
+  int expected[7];
+  } TestCase;
+
+  TestCase cases[6] = {
+    {
+      {1,2,3,0,0,0,4,5,6,0,0,0,7,0},
+      {1,2,3,4,5,6,7},
+    },
+    {
+      {1,2,3,0,0,4,5,6,7,0,0,0,0,0},
+      {1,2,3,4,5,6,7},
+    },
+    {
+      {1,0,0,0,0,0,2,3,0,0,4,5,6,7},
+      {1,2,3,4,5,6,7},
+    },
+    {
+      {0,0,0,0,0,1,2,3,0,0,4,5,6,7},
+      {1,2,3,4,5,6,7},
+    },
+    {
+      {1,2,3,0,0,0,0,0,0,0,4,5,6,7},
+      {1,2,3,4,5,6,7},
+    },
+    {
+      {1,0,0,0,0,0,0,2,3,0,4,5,6,7},
+      {1,2,3,4,5,6,7},
+    },
+  };
+
+  for (int j = 0; j < 6; j++) {
+    ReallocatedArr result = remove_empty_allocs(cases[j].given, 14);
+  if (result.len != 7) {
+    return false;
+  }
+    for (int i = 0; i < 7; i++) {
+      if (result.arr[i] !=  cases[j].expected[i]) {
+        return false;
+      }
+    }
+  }
+  
+
+  return true;
+}
 
 /*
  * Function:  main
@@ -33,23 +82,4 @@ int main() {
   // bench_1_000_000_dynamic(&sort_bartosz);
 
   return 0;
-}
-
-bool test_remove_empty_allocs() {
-
-
-  int given[14] = {1,2,3,0,0,0,4,5,6,0,0,0,7,0};
-  int expected[7] = {1,2,3,4,5,6,7};
-
-  ReallocatedArr result = remove_empty_allocs(given, 14);
-  if (result.len != 7) {
-    return false;
-  }
-  for (int i = 0; i < 14; i++) {
-    if (result.arr[i] != expected[i]) {
-      return false;
-    }
-  }
-
-  return true;
 }
