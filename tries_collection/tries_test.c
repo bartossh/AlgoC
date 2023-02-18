@@ -10,27 +10,27 @@
 #define ALPHABET_LENGTH 25
 
 bool test_basic() {
-  struct Node *root = triecreate();
+  struct Node *root = trie_create();
   if (root == NULL) {
     return false;
   }
-  trieinsert(&root, "wojewoda");
-  trieinsert(&root, "zapal");
-  trieinsert(&root, "zapalniczka");
-  trieinsert(&root, "woda");
-  trieinsert(&root, "zapalnik");
-  trieinsert(&root, "wodowanie");
-  trieinsert(&root, "zapalki");
-  trieinsert(&root, "zapalczywy");
-  bool found = triefind(&root, "zapalczywy");
+  trie_insert(&root, "wojewoda");
+  trie_insert(&root, "zapal");
+  trie_insert(&root, "zapalniczka");
+  trie_insert(&root, "woda");
+  trie_insert(&root, "zapalnik");
+  trie_insert(&root, "wodowanie");
+  trie_insert(&root, "zapalki");
+  trie_insert(&root, "zapalczywy");
+  bool found = trie_find(&root, "zapalczywy");
 
-  trieprint(root);
+  trie_print(root);
   return found;
 }
 
 bool test_rand() {
 
-  struct Node *root = triecreate();
+  struct Node *root = trie_create();
 
   char alphabet[ALPHABET_LENGTH] = "abcdefghijklmnoprstuwqxyz";
 
@@ -42,15 +42,48 @@ bool test_rand() {
       char letter = alphabet[r];
       word[j] = letter;
     }
-    trieinsert(&root, word);
-    if (!triefind(&root, word)) {
+    trie_insert(&root, word);
+    if (!trie_find(&root, word)) {
       return false;
     }
   }
 
-  trieprint(root);
+  trie_print(root);
 
   return true;
+}
+
+bool test_delete() {
+  struct Node *root = trie_create();
+  if (root == NULL) {
+    return false;
+  }
+  trie_insert(&root, "wojewoda");
+  trie_insert(&root, "zapal");
+  trie_insert(&root, "zapalniczka");
+  trie_insert(&root, "woda");
+  trie_insert(&root, "zapalnik");
+  trie_insert(&root, "wodowanie");
+  trie_insert(&root, "zapalki");
+  trie_insert(&root, "zapalczywy");
+
+  bool removed = trie_delete(&root, "zapalniczka");
+  if (removed == false) {
+    return false;
+  }
+  bool found = trie_find(&root, "zapalniczka");
+  if (found == true) {
+    return false;
+  }
+  found = trie_find(&root, "zapalnic");
+  if (found == true) {
+    return false;
+  }
+  found = trie_find(&root, "zapalnik");
+  
+
+  trie_print(root);
+  return found;
 }
 
 int main() {
@@ -59,4 +92,7 @@ int main() {
 
   bool ts1 = test_rand();
   munit_assert_true(ts1);
+
+  bool ts2 = test_delete();
+  munit_assert_true(ts2);
 }

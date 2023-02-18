@@ -11,7 +11,7 @@ typedef struct Node {
 } Node;
 
 /*
- * Function: trieinsert
+ * Function: trie_insert
  * --------------------
  * Inserts string of chars to the trei
  *
@@ -20,7 +20,7 @@ typedef struct Node {
  *
  * returns: true if string of chars inserted or false otherwise
  */
-Node *triecreate() {
+Node *trie_create() {
   Node *newnode = malloc(sizeof(*newnode));
   for (int i = 0; i < NUM_CHARS; i++) {
     newnode->children[i] = NULL;
@@ -30,7 +30,7 @@ Node *triecreate() {
 }
 
 /*
- * Function: trieinsert
+ * Function: trie_insert
  * --------------------
  * Inserts string of chars to the trei
  *
@@ -39,9 +39,9 @@ Node *triecreate() {
  *
  * returns: true if new string of chars inserted or false otherwise
  */
-bool trieinsert(Node **root, char *signedtext) {
+bool trie_insert(Node **root, char *signedtext) {
   if (*root == NULL) {
-    *root = triecreate();
+    *root = trie_create();
   }
   unsigned char *text = (unsigned char *)signedtext;
   Node *tmp = *root;
@@ -49,7 +49,7 @@ bool trieinsert(Node **root, char *signedtext) {
 
   for (int i = 0; i < length; i++) {
     if (tmp->children[text[i]] == NULL) {
-      tmp->children[text[i]] = triecreate();
+      tmp->children[text[i]] = trie_create();
     }
     tmp = tmp->children[text[i]];
   }
@@ -61,7 +61,7 @@ bool trieinsert(Node **root, char *signedtext) {
   return true;
 }
 
-void printrec(Node *node, unsigned char *prefix, int length) {
+void print_rec(Node *node, unsigned char *prefix, int length) {
   unsigned char newprefix[length + 2];
   memcpy(newprefix, prefix, length);
   newprefix[length + 1] = 0;
@@ -73,7 +73,7 @@ void printrec(Node *node, unsigned char *prefix, int length) {
   for (int i = 0; i < NUM_CHARS; i++) {
     if (node->children[i] != NULL) {
       newprefix[length] = i;
-      printrec(node->children[i], newprefix, length + 1);
+      print_rec(node->children[i], newprefix, length + 1);
     }
   }
 }
@@ -87,16 +87,16 @@ void printrec(Node *node, unsigned char *prefix, int length) {
  *
  * returns: void
  */
-void trieprint(Node *root) {
+void trie_print(Node *root) {
   if (root == NULL) {
     printf("TRIE <EMPTY>\n");
     return;
   }
-  printrec(root, NULL, 0);
+  print_rec(root, NULL, 0);
 }
 
 /*
- * Function: triefind
+ * Function: trie_find
  * --------------------
  *
  * root: pointer to the trie tree
@@ -104,9 +104,9 @@ void trieprint(Node *root) {
  *
  * returns: true if string of chars exists, false otherwise
  */
-bool triefind(Node **root, char *signedtext) {
+bool trie_find(Node **root, char *signedtext) {
   if (*root == NULL) {
-    *root = triecreate();
+    *root = trie_create();
   }
   unsigned char *text = (unsigned char *)signedtext;
   Node *tmp = *root;
@@ -123,4 +123,69 @@ bool triefind(Node **root, char *signedtext) {
     return true;
   }
   return false;
+}
+
+bool trie_free_empty(Node **root) {
+  if (root == NULL) {
+    return false;
+  }
+
+
+  bool found_terminal = false;
+  for (int i = 0; i < NUM_CHARS; i++) {
+    if ((*root)->children[i] != NULL) {
+      bool term = trie_free_empty(&(*root)->children[i]);
+      if (term == true) {
+        found_terminal = true;
+        continue;
+      }
+      free((*root)->children[i]);
+      (*root)->children[i] = NULL;
+    }
+  }
+
+  if (found_terminal == true) {
+    return true;
+  }
+
+  if ((*root)->terminal == true) {
+    return true;
+  }
+
+
+  return false;
+}
+
+/*
+ * Function: trie_delete
+ * --------------------
+ *
+ * root: pointer to the trie tree
+ * signedtext: pointer to the signed string of chars
+ *
+ * returns: true if string of chars was successfully deleted, false otherwise (string may not exist)
+ */
+bool trie_delete(Node **root, char *signedtext) {
+   if (*root == NULL) {
+    *root = trie_create();
+  }
+
+  unsigned char *text = (unsigned char *)signedtext;
+  Node *tmp = *root;
+  int len = strlen(signedtext);
+
+  for (int i = 0; i < len; i++) {
+    if (tmp->children[text[i]] == NULL) {
+      return false;
+    }
+    tmp = tmp->children[text[i]];
+  }
+
+  if (tmp->terminal == false) {
+    return false;
+  }
+
+  tmp->terminal = false;
+  trie_free_empty(root);
+  return true;
 }
