@@ -14,7 +14,7 @@ typedef struct Node
 /*
  * Function: trie_insert
  * --------------------
- * Inserts string of chars to the trei
+ * Inserts string of chars to the trie
  *
  * root: pointer to the trie tree
  * signedtext: pointer to the signed string of chars
