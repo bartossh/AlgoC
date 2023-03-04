@@ -23,6 +23,8 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 1. [Hash table](https://github.com/bartossh/AlgoC/blob/main/hash_table_collection/table.c)
 2. [Tries Tree](https://github.com/bartossh/AlgoC/blob/main/tries_collection/tries.c)
 3. [Linked List](https://github.com/bartossh/AlgoC/blob/main/linkedlist_collection/linkedlist.c)
+4. [Circular Buffer](https://github.com/bartossh/AlgoC/blob/main/circular_buffer/circular.c)
+5. [Fifo Buffer](https://github.com/bartossh/AlgoC/blob/main/fifo_buffer/fifo.c)
 
 ### Math
 
