@@ -6,7 +6,7 @@
 /*
  * Typedef: fifo_int
  * --------------------
- * Structure holding all circular buffer functionality.
+ * Structure holding fifo buffer functionality.
  *
  */
 typedef struct fifo_int
@@ -19,10 +19,10 @@ typedef struct fifo_int
 /*
  * Function: new_fifo_int
  * --------------------
- * Creates a pointer to new new_fifo_int.
+ * Creates a pointer to new fifo_int buffer.
  * cap: capacity of fifo buffer
  *
- * returns: pointer to new_fifo_int
+ * returns: pointer to fifo_int
  */
 fifo_int *new_fifo_int(int cap)
 {
@@ -97,5 +97,32 @@ int pull(fifo_int *c)
         c->len--;
     }
 
+    return v;
+}
+
+/*
+ * Function: pull_f
+ * --------------------
+ * Pulls value from the fifo buffer fast
+ * c: fifo_int
+ *
+ * returns: int
+ */
+int pull_f(fifo_int *c)
+{
+    int *buf;
+    if (c->len == 0 || c->buf == NULL)
+    {
+        exit(1);
+    }
+
+    int v = c->buf[0];
+
+    for (int i = 0; i < c->len - 1; i++)
+    {
+        c->buf[i] = c->buf[i + 1];
+    }
+
+    c->len--;
     return v;
 }
