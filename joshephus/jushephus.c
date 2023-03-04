@@ -1,14 +1,16 @@
 #include <stdbool.h>
 #include <stdio.h>
 
-unsigned int max_set_bit_position(unsigned num) {
+unsigned int max_set_bit_position(unsigned num)
+{
     unsigned r = 0;
 
-    while (num >>= 1) {
+    while (num >>= 1)
+    {
         r++;
     }
 
-    return r+1;
+    return r + 1;
 }
 
 /*
@@ -29,7 +31,8 @@ unsigned int max_set_bit_position(unsigned num) {
  * or whether by the providence of God," and he convinced the other survivor to surrender rather than die.
  *  returns: unsigned int
  */
-unsigned joshephus_solver(unsigned num) {
+unsigned joshephus_solver(unsigned num)
+{
     unsigned mask = 1 << (max_set_bit_position(num) - 1);
     unsigned res = mask ^ num;
     res = (res << 1) + 1;

@@ -3,16 +3,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node {
-  int value;
-  struct node *previous;
-  struct node *next;
+typedef struct node
+{
+    int value;
+    struct node *previous;
+    struct node *next;
 } Node;
 
-typedef struct linkedlist {
-  int length;
-  Node *head;
-  Node *tail;
+typedef struct linkedlist
+{
+    int length;
+    Node *head;
+    Node *tail;
 } LinkedList;
 
 /*
@@ -22,12 +24,13 @@ typedef struct linkedlist {
  *
  * returns: pointer to LinkedList instance
  */
-LinkedList *new_linked_list() {
-  LinkedList *ll = malloc(sizeof(LinkedList));
-  ll->head = NULL;
-  ll->tail = NULL;
-  ll->length = 0;
-  return ll;
+LinkedList *new_linked_list()
+{
+    LinkedList *ll = malloc(sizeof(LinkedList));
+    ll->head = NULL;
+    ll->tail = NULL;
+    ll->length = 0;
+    return ll;
 }
 
 /*
@@ -39,31 +42,34 @@ LinkedList *new_linked_list() {
  *
  * returns: true if success or false otherwise
  */
-bool insert_tail_linked_list(LinkedList *ll, int item) {
-  if (ll == NULL) {
-    return false;
-  }
+bool insert_tail_linked_list(LinkedList *ll, int item)
+{
+    if (ll == NULL)
+    {
+        return false;
+    }
 
-  ll->length++;
+    ll->length++;
 
-  Node *n = malloc(sizeof(Node));
+    Node *n = malloc(sizeof(Node));
 
-  if (ll->tail == NULL) {
+    if (ll->tail == NULL)
+    {
+        n->next = NULL;
+        n->previous = NULL;
+        n->value = item;
+        ll->head = n;
+        ll->tail = n;
+        return true;
+    }
+
+    ll->tail->next = n;
     n->next = NULL;
-    n->previous = NULL;
+    n->previous = ll->tail;
     n->value = item;
-    ll->head = n;
     ll->tail = n;
+
     return true;
-  }
-
-  ll->tail->next = n;
-  n->next = NULL;
-  n->previous = ll->tail;
-  n->value = item;
-  ll->tail = n;
-
-  return true;
 }
 
 /*
@@ -75,39 +81,44 @@ bool insert_tail_linked_list(LinkedList *ll, int item) {
  *
  * returns: true if success or false otherwise
  */
-bool insert_head_linked_list(LinkedList *ll, int item) {
-  if (ll == NULL) {
-    return false;
-  }
+bool insert_head_linked_list(LinkedList *ll, int item)
+{
+    if (ll == NULL)
+    {
+        return false;
+    }
 
-  ll->length++;
+    ll->length++;
 
-  Node *n = malloc(sizeof(Node));
+    Node *n = malloc(sizeof(Node));
 
-  if (ll->head == NULL) {
-    n->next = NULL;
+    if (ll->head == NULL)
+    {
+        n->next = NULL;
+        n->previous = NULL;
+        n->value = item;
+        ll->head = n;
+        ll->tail = n;
+        return true;
+    }
+
+    ll->head->previous = n;
+    n->next = ll->head;
     n->previous = NULL;
     n->value = item;
     ll->head = n;
-    ll->tail = n;
+
     return true;
-  }
-
-  ll->head->previous = n;
-  n->next = ll->head;
-  n->previous = NULL;
-  n->value = item;
-  ll->head = n;
-
-  return true;
 }
 
-void free_node_of_linked_list(Node *n) {
-  if (n == NULL) {
-    return;
-  }
-  free_node_of_linked_list(n->next);
-  free(n);
+void free_node_of_linked_list(Node *n)
+{
+    if (n == NULL)
+    {
+        return;
+    }
+    free_node_of_linked_list(n->next);
+    free(n);
 }
 
 /*
@@ -118,25 +129,30 @@ void free_node_of_linked_list(Node *n) {
  *
  * returns: void
  */
-void free_linked_list(LinkedList *ll) {
-  if (ll == NULL) {
-    return;
-  }
+void free_linked_list(LinkedList *ll)
+{
+    if (ll == NULL)
+    {
+        return;
+    }
 
-  if (ll->head == NULL || ll->tail == NULL) {
+    if (ll->head == NULL || ll->tail == NULL)
+    {
+        free(ll);
+        return;
+    }
+    free_node_of_linked_list(ll->head);
     free(ll);
-    return;
-  }
-  free_node_of_linked_list(ll->head);
-  free(ll);
 }
 
-void print_node_of_linked_list(Node *n) {
-  if (n == NULL) {
-    return;
-  }
-  printf("-> %i ", n->value);
-  print_node_of_linked_list(n->next);
+void print_node_of_linked_list(Node *n)
+{
+    if (n == NULL)
+    {
+        return;
+    }
+    printf("-> %i ", n->value);
+    print_node_of_linked_list(n->next);
 }
 
 /*
@@ -147,13 +163,15 @@ void print_node_of_linked_list(Node *n) {
  *
  * returns: void
  */
-void print_linked_list(LinkedList *ll) {
-  if (ll == NULL || ll->length == 0) {
-    return;
-  }
-  printf("HEAD | ");
-  print_node_of_linked_list(ll->head);
-  printf("| TAIL\n");
+void print_linked_list(LinkedList *ll)
+{
+    if (ll == NULL || ll->length == 0)
+    {
+        return;
+    }
+    printf("HEAD | ");
+    print_node_of_linked_list(ll->head);
+    printf("| TAIL\n");
 }
 
 /*
@@ -164,11 +182,13 @@ void print_linked_list(LinkedList *ll) {
  *
  * returns: int representing linked list length, -1 if LinkedList is NULL
  */
-int length_linked_list(LinkedList *ll) {
-  if (ll == NULL) {
-    return -1;
-  }
-  return ll->length;
+int length_linked_list(LinkedList *ll)
+{
+    if (ll == NULL)
+    {
+        return -1;
+    }
+    return ll->length;
 }
 
 /*
@@ -180,66 +200,79 @@ int length_linked_list(LinkedList *ll) {
  *
  * returns: true if success or false otherwise
  */
-bool insert_into_Linked_list_at(LinkedList *ll, int item, int index) {
-  if (ll == NULL) {
-    return false;
-  }
-
-  if (index > ll->length) {
-    return false;
-  }
-
-  Node *n = malloc(sizeof(Node));
-  n->value = item;
-
-  if (index == 0) {
-    insert_head_linked_list(ll, item);
-    return true;
-  }
-  if (index == ll->length) {
-    insert_tail_linked_list(ll, item);
-    return true;
-  }
-
-  ll->length++;
-
-  Node *next = ll->head;
-
-  for (int i = 1; i < index; i++) {
-    if (next == NULL) {
-      return false;
+bool insert_into_Linked_list_at(LinkedList *ll, int item, int index)
+{
+    if (ll == NULL)
+    {
+        return false;
     }
-    next = next->next;
-  }
 
-  Node *temp = next->next;
-  next->next = n;
-  n->previous = next;
-  n->next = temp;
+    if (index > ll->length)
+    {
+        return false;
+    }
 
-  return true;
+    Node *n = malloc(sizeof(Node));
+    n->value = item;
+
+    if (index == 0)
+    {
+        insert_head_linked_list(ll, item);
+        return true;
+    }
+    if (index == ll->length)
+    {
+        insert_tail_linked_list(ll, item);
+        return true;
+    }
+
+    ll->length++;
+
+    Node *next = ll->head;
+
+    for (int i = 1; i < index; i++)
+    {
+        if (next == NULL)
+        {
+            return false;
+        }
+        next = next->next;
+    }
+
+    Node *temp = next->next;
+    next->next = n;
+    n->previous = next;
+    n->next = temp;
+
+    return true;
 }
 
-int linked_list_loop_forward(LinkedList *ll, Node *n, int index) {
-  for (int i = 0; i < index; i++) {
-    if (n == NULL) {
-      return INT_MIN;
+int linked_list_loop_forward(LinkedList *ll, Node *n, int index)
+{
+    for (int i = 0; i < index; i++)
+    {
+        if (n == NULL)
+        {
+            return INT_MIN;
+        }
+        n = n->next;
     }
-    n = n->next;
-  }
 
-  return n->value;
+    return n->value;
 }
 
-int linked_list_loop_backward(LinkedList *ll, Node *n, int index) {
-  for (int i = ll->length - index - 2; i >= 0; i--) {
-    if (n == NULL) {
-      return INT_MIN;
+int linked_list_loop_backward(LinkedList *ll, Node *n, int index)
+{
+    for (int i = ll->length - index - 2; i >= 0; i--)
+    {
+        if (n == NULL)
+        {
+            return INT_MIN;
+        }
+        n = n->previous;
     }
-    n = n->previous;
-  }
 
-  return n->value;
+    return n->value;
 }
 
 /*
@@ -251,68 +284,83 @@ int linked_list_loop_backward(LinkedList *ll, Node *n, int index) {
  *
  * returns: int that is an item at provided index or if not found INT_MIN
  */
-int get_item_linked_list_at_index(LinkedList *ll, int index) {
-  if (ll == NULL || index >= ll->length) {
-    return INT_MIN;
-  }
-
-  if (ll->head == NULL || ll->tail == NULL) {
-    return INT_MIN;
-  }
-
-  Node *n = ll->head;
-
-  if (index == 0) {
-    return n->value;
-  }
-  if (index == ll->length - 1) {
-    return ll->tail->value;
-  }
-
-  if (index < ll->length / 2) {
-    return linked_list_loop_forward(ll, n, index);
-  }
-  return linked_list_loop_backward(ll, ll->tail, index);
-}
-
-void remove_and_free_node(Node *n) {
-  if (n->previous != NULL) {
-
-    n->previous->next = n->next;
-  }
-
-  if (n->next != NULL) {
-
-    n->next->previous = n->previous;
-  }
-
-  free(n);
-}
-
-bool remove_from_the_head(LinkedList *ll, Node *n, int index) {
-  for (int i = 0; i < index; i++) {
-    if (n == NULL) {
-      return false;
+int get_item_linked_list_at_index(LinkedList *ll, int index)
+{
+    if (ll == NULL || index >= ll->length)
+    {
+        return INT_MIN;
     }
-    n = n->next;
-  }
 
-  remove_and_free_node(n);
+    if (ll->head == NULL || ll->tail == NULL)
+    {
+        return INT_MIN;
+    }
 
-  return true;
+    Node *n = ll->head;
+
+    if (index == 0)
+    {
+        return n->value;
+    }
+    if (index == ll->length - 1)
+    {
+        return ll->tail->value;
+    }
+
+    if (index < ll->length / 2)
+    {
+        return linked_list_loop_forward(ll, n, index);
+    }
+    return linked_list_loop_backward(ll, ll->tail, index);
 }
 
-bool remove_from_the_tail(LinkedList *ll, Node *n, int index) {
-  for (int i = ll->length - index - 2; i >= 0; i--) {
-    if (n == NULL) {
-      return false;
+void remove_and_free_node(Node *n)
+{
+    if (n->previous != NULL)
+    {
+
+        n->previous->next = n->next;
     }
-    n = n->previous;
-  }
 
-  remove_and_free_node(n);
+    if (n->next != NULL)
+    {
 
-  return true;
+        n->next->previous = n->previous;
+    }
+
+    free(n);
+}
+
+bool remove_from_the_head(LinkedList *ll, Node *n, int index)
+{
+    for (int i = 0; i < index; i++)
+    {
+        if (n == NULL)
+        {
+            return false;
+        }
+        n = n->next;
+    }
+
+    remove_and_free_node(n);
+
+    return true;
+}
+
+bool remove_from_the_tail(LinkedList *ll, Node *n, int index)
+{
+    for (int i = ll->length - index - 2; i >= 0; i--)
+    {
+        if (n == NULL)
+        {
+            return false;
+        }
+        n = n->previous;
+    }
+
+    remove_and_free_node(n);
+
+    return true;
 }
 
 /*
@@ -324,54 +372,63 @@ bool remove_from_the_tail(LinkedList *ll, Node *n, int index) {
  *
  * returns: bool value representing success of the operation
  */
-bool remove_item_linked_list_at_index(LinkedList *ll, int index) {
-  if (ll == NULL || index > ll->length) {
-    return false;
-  }
+bool remove_item_linked_list_at_index(LinkedList *ll, int index)
+{
+    if (ll == NULL || index > ll->length)
+    {
+        return false;
+    }
 
-  if (ll->head == NULL || ll->tail == NULL) {
-    return false;
-  }
+    if (ll->head == NULL || ll->tail == NULL)
+    {
+        return false;
+    }
 
-  if (ll->length == 1) {
-    free_node_of_linked_list(ll->head);
-    ll->head = NULL;
-    ll->tail = NULL;
-    ll->length = 0;
-    return true;
-  }
+    if (ll->length == 1)
+    {
+        free_node_of_linked_list(ll->head);
+        ll->head = NULL;
+        ll->tail = NULL;
+        ll->length = 0;
+        return true;
+    }
 
-  if (index == 0) {
-    Node *tmp = ll->head->next;
-    remove_and_free_node(ll->head);
-    ll->head = tmp;
-    ll->length--;
-    return true;
-  }
+    if (index == 0)
+    {
+        Node *tmp = ll->head->next;
+        remove_and_free_node(ll->head);
+        ll->head = tmp;
+        ll->length--;
+        return true;
+    }
 
-  if (index == ll->length - 1) {
-    Node *tmp = ll->tail->previous;
-    remove_and_free_node(ll->tail);
-    ll->tail = tmp;
-    ll->length--;
-    return true;
-  }
+    if (index == ll->length - 1)
+    {
+        Node *tmp = ll->tail->previous;
+        remove_and_free_node(ll->tail);
+        ll->tail = tmp;
+        ll->length--;
+        return true;
+    }
 
-  if (index < ll->length / 2) {
-    Node *n = ll->head;
+    if (index < ll->length / 2)
+    {
+        Node *n = ll->head;
 
-    if (remove_from_the_head(ll, n, index)) {
-      ll->length--;
-      return true;
+        if (remove_from_the_head(ll, n, index))
+        {
+            ll->length--;
+            return true;
+        }
+        return false;
+    }
+
+    Node *n = ll->tail;
+
+    if (remove_from_the_tail(ll, n, index))
+    {
+        ll->length--;
+        return true;
     }
     return false;
-  }
-
-  Node *n = ll->tail;
-
-  if (remove_from_the_tail(ll, n, index)) {
-    ll->length--;
-    return true;
-  }
-  return false;
 }
