@@ -37,7 +37,7 @@ fifo_int *new_fifo_int(int cap)
 }
 
 /*
- * Function: push
+ * Function: fifo_push
  * --------------------
  * Pushes value to the buffer
  * Doubles the capacity if capacity is reached.
@@ -46,7 +46,7 @@ fifo_int *new_fifo_int(int cap)
  *
  * returns: void
  */
-void push(fifo_int *c, int v)
+void fifo_push(fifo_int *c, int v)
 {
     if (c->buf == NULL)
     {
@@ -65,14 +65,14 @@ void push(fifo_int *c, int v)
 }
 
 /*
- * Function: pull
+ * Function: fifo_pull_alloc
  * --------------------
  * Pulls value from the fifo buffer
  * c: fifo_int
  *
- * returns: int
+ * returns: int value kept in the buffer in fifo order
  */
-int pull(fifo_int *c)
+int fifo_pull_alloc(fifo_int *c)
 {
     int *buf;
     if (c->len == 0 || c->buf == NULL)
@@ -101,14 +101,14 @@ int pull(fifo_int *c)
 }
 
 /*
- * Function: pull_f
+ * Function: fifo_pull_iter
  * --------------------
- * Pulls value from the fifo buffer fast
+ * Pulls value from the fifo buffer with interation
  * c: fifo_int
  *
- * returns: int
+ * returns: int value kept in the buffer in fifo order
  */
-int pull_f(fifo_int *c)
+int fifo_pull_iter(fifo_int *c)
 {
     int *buf;
     if (c->len == 0 || c->buf == NULL)
@@ -125,4 +125,18 @@ int pull_f(fifo_int *c)
 
     c->len--;
     return v;
+}
+
+/*
+ * Function: fifo_free
+ * --------------------
+ * Frees memory hold by the fifo_int
+ * c: fifo_int
+ *
+ * returns: void
+ */
+void fifo_free(fifo_int *c)
+{
+    free(c->buf);
+    c->buf = NULL;
 }
