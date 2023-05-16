@@ -24,7 +24,7 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 2. [Tries Tree](https://github.com/bartossh/AlgoC/blob/main/tries_collection/tries.c)
 3. [Linked List](https://github.com/bartossh/AlgoC/blob/main/linkedlist_collection/linkedlist.c)
 4. [Circular Buffer](https://github.com/bartossh/AlgoC/blob/main/circular_buffer/circular.c)
-5. [Fifo Buffer](https://github.com/bartossh/AlgoC/blob/main/fifo_buffer/fifo.c)
+5. [Fifo Buffer]grade-school
 
 ### Math
 
@@ -38,3 +38,7 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 1. [Fibonacci nth element](https://github.com/bartossh/AlgoC/blob/main/fibonacci_dyn_prog/fibonacci.c) - calculates n'th fibonacci sequence element recursively storing each n'th fibonacci value in the map to only calculate it once
 2. [Coin Change](https://github.com/bartossh/AlgoC/blob/main/coinchange_dyn_prog/coinchange.c) - calculates the fewest number of coins that need to make up that amount
 2. [Max Sub Array](https://github.com/bartossh/AlgoC/blob/main/maxsubarray_dyn_prog/maxsubarray.c) - find the sub array which has the largest sum and return its sum.
+
+### Exercism
+
+1. [grade-school](https://github.com/bartossh/AlgoC/blob/main/grade-school/grade_school.c)
