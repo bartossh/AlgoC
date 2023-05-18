@@ -42,4 +42,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 ### Exercism
 
 1. [grade-school](https://github.com/bartossh/AlgoC/blob/main/grade-school/grade_school.c) - Grade school exercism task.
-1. [list-ops](https://github.com/bartossh/AlgoC/blob/main/list-ops/list-ops.c) - List operations exercism task.
+2. [list-ops](https://github.com/bartossh/AlgoC/blob/main/list-ops/list-ops.c) - List operations exercism task.
+3. [collatz-conjecture](https://github.com/bartossh/AlgoC/blob/main/collatz-conjecture/collatz_conjecture.c) - Collatz conjecture exercism task.
