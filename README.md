@@ -49,3 +49,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 6. [Nucleotide count](https://github.com/bartossh/AlgoC/blob/main/nucleotide-count/nucleotide_count.c) - Nucleotide-count exercism task.
 7. [Pascals triangle](https://github.com/bartossh/AlgoC/blob/main/pascals-triangle/pascals_triangle.c) - Pascals-triangle exercism task.
 8. [Rna transcription](https://github.com/bartossh/AlgoC/blob/main/rna-transcription/rna_transcription.c) - Rna-transcription exercism task.
+9. [Robot simulator](https://github.com/bartossh/AlgoC/blob/main/robot-simulator/robot_simulator.c) - Robot-simulator exercism task.
+10. [Clock](https://github.com/bartossh/AlgoC/blob/main/clock/clock.c) - Clock exercism task.
