@@ -41,11 +41,11 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 
 ### Exercism
 
-1. [grade-school](https://github.com/bartossh/AlgoC/blob/main/grade-school/grade_school.c) - Grade school exercism task.
-2. [list-ops](https://github.com/bartossh/AlgoC/blob/main/list-ops/list_ops.c) - List operations exercism task.
-3. [collatz-conjecture](https://github.com/bartossh/AlgoC/blob/main/collatz-conjecture/collatz_conjecture.c) - Collatz conjecture exercism task.
-4. [sieve](https://github.com/bartossh/AlgoC/blob/main/sieve/sieve.c) - Sieve exercism task.
-5. [binary](https://github.com/bartossh/AlgoC/blob/main/binary/binary.c) - Binary exercism task.
-6. [binary](https://github.com/bartossh/AlgoC/blob/main/nucleotide-count/nucleotide_count.c) - Nucleotide-count exercism task.
-7. [binary](https://github.com/bartossh/AlgoC/blob/main/pascals-trianglet/pascals_trianglet.c) - Pascals-triangle exercism task.
-8. [binary](https://github.com/bartossh/AlgoC/blob/main/rna-transcription/rna_transcription.c) - Rna-transcription exercism task.
+1. [Grade school](https://github.com/bartossh/AlgoC/blob/main/grade-school/grade_school.c) - Grade school exercism task.
+2. [List ops](https://github.com/bartossh/AlgoC/blob/main/list-ops/list_ops.c) - List operations exercism task.
+3. [Collatz conjecture](https://github.com/bartossh/AlgoC/blob/main/collatz-conjecture/collatz_conjecture.c) - Collatz conjecture exercism task.
+4. [Sieve](https://github.com/bartossh/AlgoC/blob/main/sieve/sieve.c) - Sieve exercism task.
+5. [Binary](https://github.com/bartossh/AlgoC/blob/main/binary/binary.c) - Binary exercism task.
+6. [Nucleotide count](https://github.com/bartossh/AlgoC/blob/main/nucleotide-count/nucleotide_count.c) - Nucleotide-count exercism task.
+7. [Pascals triangle](https://github.com/bartossh/AlgoC/blob/main/pascals-triangle/pascals_triangle.c) - Pascals-triangle exercism task.
+8. [Rna transcription](https://github.com/bartossh/AlgoC/blob/main/rna-transcription/rna_transcription.c) - Rna-transcription exercism task.
