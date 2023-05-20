@@ -55,3 +55,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 12. [Darts](https://github.com/bartossh/AlgoC/blob/main/darts/darts.c) - Darts exercism task.
 13. [Pangram](https://github.com/bartossh/AlgoC/blob/main/pangram/pangram.c) - Pangram exercism task.
 14. [Queen attack](https://github.com/bartossh/AlgoC/blob/main/queen-attack/queen_attack.c) - Queen-attack exercism task.
+15. [Acronym](https://github.com/bartossh/AlgoC/blob/main/acronym/acronym.c) - Acronym exercism task.
+16. [Word count](https://github.com/bartossh/AlgoC/blob/main/word-count/word_count.c) - Word-count exercism task.
