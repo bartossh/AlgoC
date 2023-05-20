@@ -51,3 +51,7 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 8. [Rna transcription](https://github.com/bartossh/AlgoC/blob/main/rna-transcription/rna_transcription.c) - Rna-transcription exercism task.
 9. [Robot simulator](https://github.com/bartossh/AlgoC/blob/main/robot-simulator/robot_simulator.c) - Robot-simulator exercism task.
 10. [Clock](https://github.com/bartossh/AlgoC/blob/main/clock/clock.c) - Clock exercism task.
+11. [Complex numbers](https://github.com/bartossh/AlgoC/blob/main/complex-numbers/complex_numbers.c) - Complex-numbers exercism task.
+12. [Darts](https://github.com/bartossh/AlgoC/blob/main/darts/darts.c) - Darts exercism task.
+13. [Pangram](https://github.com/bartossh/AlgoC/blob/main/pangram/pangram.c) - Pangram exercism task.
+14. [Queen attack](https://github.com/bartossh/AlgoC/blob/main/queen-attack/queen_attack.c) - Queen-attack exercism task.
