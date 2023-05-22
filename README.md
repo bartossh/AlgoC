@@ -57,3 +57,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 14. [Queen attack](https://github.com/bartossh/AlgoC/blob/main/queen-attack/queen_attack.c) - Queen-attack exercism task.
 15. [Acronym](https://github.com/bartossh/AlgoC/blob/main/acronym/acronym.c) - Acronym exercism task.
 16. [Word count](https://github.com/bartossh/AlgoC/blob/main/word-count/word_count.c) - Word-count exercism task.
+17. [Secret handshake](https://github.com/bartossh/AlgoC/blob/main/secret-handshake/secret_handshake.c) - Secret handshake exercism task.
+18. [Prime factors](https://github.com/bartossh/AlgoC/blob/main/prime-factors/prime_factors.c) - Word-count exercism task.
