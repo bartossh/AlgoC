@@ -59,3 +59,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 16. [Word count](https://github.com/bartossh/AlgoC/blob/main/word-count/word_count.c) - Word-count exercism task.
 17. [Secret handshake](https://github.com/bartossh/AlgoC/blob/main/secret-handshake/secret_handshake.c) - Secret handshake exercism task.
 18. [Prime factors](https://github.com/bartossh/AlgoC/blob/main/prime-factors/prime_factors.c) - Word-count exercism task.
+19. [Space age](https://github.com/bartossh/AlgoC/blob/main/space-age/space_age.c) - Space age exercism task.
+20. [Two fer](https://github.com/bartossh/AlgoC/blob/main/two-fer/two_fer.c) - Two fer exercism task.
