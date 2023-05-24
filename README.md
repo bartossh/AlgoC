@@ -61,3 +61,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 18. [Prime factors](https://github.com/bartossh/AlgoC/blob/main/prime-factors/prime_factors.c) - Word-count exercism task.
 19. [Space age](https://github.com/bartossh/AlgoC/blob/main/space-age/space_age.c) - Space age exercism task.
 20. [Two fer](https://github.com/bartossh/AlgoC/blob/main/two-fer/two_fer.c) - Two fer exercism task.
+21. [Rational number](https://github.com/bartossh/AlgoC/blob/main/rational-numbers/rational_numbers.c) - Rational numbers exercism task.
+22. [Square root](https://github.com/bartossh/AlgoC/blob/main/square-root/square_root.c) - Square root exercism task.
