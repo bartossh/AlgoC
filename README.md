@@ -63,3 +63,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 20. [Two fer](https://github.com/bartossh/AlgoC/blob/main/two-fer/two_fer.c) - Two fer exercism task.
 21. [Rational number](https://github.com/bartossh/AlgoC/blob/main/rational-numbers/rational_numbers.c) - Rational numbers exercism task.
 22. [Square root](https://github.com/bartossh/AlgoC/blob/main/square-root/square_root.c) - Square root exercism task.
+23. [Pythagorean triplet](https://github.com/bartossh/AlgoC/blob/main/pythagorean-triplet/pythagorean_triplet.c) - Pythagorean triple exercism task.
