@@ -64,3 +64,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 21. [Rational number](https://github.com/bartossh/AlgoC/blob/main/rational-numbers/rational_numbers.c) - Rational numbers exercism task.
 22. [Square root](https://github.com/bartossh/AlgoC/blob/main/square-root/square_root.c) - Square root exercism task.
 23. [Pythagorean triplet](https://github.com/bartossh/AlgoC/blob/main/pythagorean-triplet/pythagorean_triplet.c) - Pythagorean triple exercism task.
+24. [Saddle points](https://github.com/bartossh/AlgoC/blob/main/saddle-points/saddle_points.c) - Saddle points exercism task.
+25. [Allergies](https://github.com/bartossh/AlgoC/blob/main/allergies/allergies.c) - Allergies exercism task.
