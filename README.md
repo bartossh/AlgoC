@@ -66,3 +66,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 23. [Pythagorean triplet](https://github.com/bartossh/AlgoC/blob/main/pythagorean-triplet/pythagorean_triplet.c) - Pythagorean triple exercism task.
 24. [Saddle points](https://github.com/bartossh/AlgoC/blob/main/saddle-points/saddle_points.c) - Saddle points exercism task.
 25. [Allergies](https://github.com/bartossh/AlgoC/blob/main/allergies/allergies.c) - Allergies exercism task.
+26. [Phone number](https://github.com/bartossh/AlgoC/blob/main/phone-number/phone_number.c) - Phone number exercism task.
