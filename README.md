@@ -70,3 +70,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 27. [Linked list](https://github.com/bartossh/AlgoC/blob/main/linked-list/linked_list.c) - Linked list exercism task.
 28. [Resistor color duo](https://github.com/bartossh/AlgoC/blob/main/resistor-color-duo/resistor_color_duo.c) - Resistor color duo exercism task.
 29. [Resistor color trio](https://github.com/bartossh/AlgoC/blob/main/resistor-color-trio/resistor_color_trio.c) - Resistor color trio exercism task.
+30. [Rail fence cipher](https://github.com/bartossh/AlgoC/blob/main/rail-fence-cipher/rail_fence_cipher.c) - Rail fence cipher exercism task.
