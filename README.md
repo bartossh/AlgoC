@@ -71,3 +71,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 28. [Resistor color duo](https://github.com/bartossh/AlgoC/blob/main/resistor-color-duo/resistor_color_duo.c) - Resistor color duo exercism task.
 29. [Resistor color trio](https://github.com/bartossh/AlgoC/blob/main/resistor-color-trio/resistor_color_trio.c) - Resistor color trio exercism task.
 30. [Rail fence cipher](https://github.com/bartossh/AlgoC/blob/main/rail-fence-cipher/rail_fence_cipher.c) - Rail fence cipher exercism task.
+31. [Matching brackets](https://github.com/bartossh/AlgoC/blob/main/matching-brackets/matching_brackets.c) - Matching brackets exercism task.
