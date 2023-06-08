@@ -73,3 +73,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 30. [Rail fence cipher](https://github.com/bartossh/AlgoC/blob/main/rail-fence-cipher/rail_fence_cipher.c) - Rail fence cipher exercism task.
 31. [Matching brackets](https://github.com/bartossh/AlgoC/blob/main/matching-brackets/matching_brackets.c) - Matching brackets exercism task.
 32. [Leap](https://github.com/bartossh/AlgoC/blob/main/leap/leap.c) - Leap exercism task.
+33. [Raindrops](https://github.com/bartossh/AlgoC/blob/main/raindrops/raindrops.c) - Raindrops exercism task.
