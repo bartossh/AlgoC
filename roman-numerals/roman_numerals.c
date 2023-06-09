@@ -6,8 +6,8 @@
 const uint32_t nums[7] = {1000, 500, 100, 50, 10, 5, 1};
 const char roman[7] = {'M', 'D', 'C', 'L', 'X', 'V', 'I'};
 
-const char *patterns[] = {"DCCCC", "CCCC", "LXXXX", "XXXX", "VIIII", "IIII" };
-const char *replace[] = {"CM", "CD", "XC", "XL", "IX", "IV" };
+const char *patterns[] = {"DCCCC", "CCCC", "LXXXX", "XXXX", "VIIII", "IIII"};
+const char *replace[] = {"CM", "CD", "XC", "XL", "IX", "IV"};
 
 char *replace_with(char str[], const char substr[], const char replace[])
 {
@@ -92,7 +92,6 @@ char *to_roman_numeral(uint32_t number)
 
     res[idx] = '\0';
 
-    printf("%s\n", res);
     for (int i = 0; i < 6; i++)
     {
         res = replace_with(res, patterns[i], replace[i]);

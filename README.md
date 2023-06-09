@@ -74,4 +74,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 31. [Matching brackets](https://github.com/bartossh/AlgoC/blob/main/matching-brackets/matching_brackets.c) - Matching brackets exercism task.
 32. [Leap](https://github.com/bartossh/AlgoC/blob/main/leap/leap.c) - Leap exercism task.
 33. [Raindrops](https://github.com/bartossh/AlgoC/blob/main/raindrops/raindrops.c) - Raindrops exercism task.
-34. [Roman numerals](https://github.com/bartossh/AlgoC/blob/main/roman-numerals/roman-numerals.c) - Roman numerals exercism task.
+34. [Roman numerals](https://github.com/bartossh/AlgoC/blob/main/roman-numerals/roman_numerals.c) - Roman numerals exercism task.
