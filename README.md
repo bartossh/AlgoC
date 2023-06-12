@@ -75,4 +75,5 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 32. [Leap](https://github.com/bartossh/AlgoC/blob/main/leap/leap.c) - Leap exercism task.
 33. [Raindrops](https://github.com/bartossh/AlgoC/blob/main/raindrops/raindrops.c) - Raindrops exercism task.
 34. [Roman numerals](https://github.com/bartossh/AlgoC/blob/main/roman-numerals/roman_numerals.c) - Roman numerals exercism task.
-35. [ETL](https://github.com/bartossh/AlgoC/blob/main/etl/etl.c) - ETL exercism task.
+35. [ETL](https://github.com/bartossh/algoc/blob/main/etl/etl.c) - Etl exercism task.
+36. [Series](https://github.com/bartossh/algoc/blob/main/series/series.c) - Series exercism task.
