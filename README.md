@@ -79,3 +79,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 36. [Series](https://github.com/bartossh/algoc/blob/main/series/series.c) - Series exercism task.
 37. [Triangle](https://github.com/bartossh/algoc/blob/main/triangle/triangle.c) - Triangle exercism task.
 38. [Diamond](https://github.com/bartossh/algoc/blob/main/diamond/diamond.c) - Diamond exercism task.
+39. [Minesweeper](https://github.com/bartossh/algoc/blob/main/minesweeper/minesweeper.c) - Minesweeper exercism task.
