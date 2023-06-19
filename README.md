@@ -82,4 +82,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 39. [Minesweeper](https://github.com/bartossh/algoc/blob/main/minesweeper/minesweeper.c) - Minesweeper exercism task.
 40. [Palindrome products](https://github.com/bartossh/algoc/blob/main/palindrome-products/palindrome_products.c) - Palindrome products exercism task.
 41. [Reverse string](https://github.com/bartossh/algoc/blob/main/reverse-string/reverse_string.c) - Reverse string exercism task.
-42. [High Scores](https://github.com/bartossh/algoc/blob/main/high-socores/high_scores.c) - High scores exercism task.
+42. [High Scores](https://github.com/bartossh/algoc/blob/main/high-scores/high_scores.c) - High scores exercism task.
