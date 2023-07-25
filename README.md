@@ -85,3 +85,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 42. [High Scores](https://github.com/bartossh/algoc/blob/main/high-scores/high_scores.c) - High scores exercism task.
 43. [Perfect numbers](https://github.com/bartossh/algoc/blob/main/perfect-numbers/perfect_numbers.c) - Perfect numbers exercism task.
 44. [Luhn](https://github.com/bartossh/algoc/blob/main/luhn/luhn.c) - Luhn numbers exercism task.
+45. [Meetup](https://github.com/bartossh/algoc/blob/main/meetup/meetup.c) - Meetup exercism task.
