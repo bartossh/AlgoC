@@ -86,3 +86,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 43. [Perfect numbers](https://github.com/bartossh/algoc/blob/main/perfect-numbers/perfect_numbers.c) - Perfect numbers exercism task.
 44. [Luhn](https://github.com/bartossh/algoc/blob/main/luhn/luhn.c) - Luhn numbers exercism task.
 45. [Meetup](https://github.com/bartossh/algoc/blob/main/meetup/meetup.c) - Meetup exercism task.
+46. [Meetup](https://github.com/bartossh/algoc/blob/main/two-bucket/two-bucket.c) - Two-bucket exercism task.
