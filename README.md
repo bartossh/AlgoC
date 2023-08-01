@@ -88,4 +88,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 45. [Meetup](https://github.com/bartossh/algoc/blob/main/meetup/meetup.c) - Meetup exercism task.
 46. [Two Bucket](https://github.com/bartossh/algoc/blob/main/two-bucket/two_bucket.c) - Two-bucket exercism task.
 47. [Binary Search Tree](https://github.com/bartossh/algoc/blob/main/binary-search-tree/binary_search_tree.c) - Binary search tree exercism task.
-
+48. [Anagram](https://github.com/bartossh/algoc/blob/main/anagram/anagram.c) - Anagram exercism task.
