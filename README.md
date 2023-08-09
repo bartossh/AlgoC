@@ -90,3 +90,4 @@ Clone ***munit*** in the root of this repo `git clone https://github.com/nemequ/
 47. [Binary Search Tree](https://github.com/bartossh/algoc/blob/main/binary-search-tree/binary_search_tree.c) - Binary search tree exercism task.
 48. [Anagram](https://github.com/bartossh/algoc/blob/main/anagram/anagram.c) - Anagram exercism task.
 49. [Sum of multiples](https://github.com/bartossh/algoc/blob/main/sum-of-multiples/sum_of_multiples.c) - Sum of multiples exercism task.
+50. [Nth prime](https://github.com/bartossh/algoc/blob/main/nth-prime/nth_prime.c) - Nth prime exercism task.
